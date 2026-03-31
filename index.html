@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="أفضل أداة لزخرفة الأسماء والنصوص بالعربي والإنجليزي — أكثر من 50 خطاً فريداً جاهز للنسخ لانستقرام وفيسبوك والألعاب">
+    <meta name="keywords"
+        content="زخرفة عربي, زخرفة انجليزي, زخرفة اسماء, خطوط عربية, خطوط انجليزية, زخرفة انستقرام, زخرفة يقبلها انستقرام">
+    <title>زخرفة انجليزي وعربي - أفضل أداة لزخرفة الأسماء والنصوص</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Scheherazade+New:wght@400;700&family=Noto+Naskh+Arabic:wght@400;700&family=Noto+Kufi+Arabic:wght@400;700&family=Cairo:wght@400;600;800&family=Tajawal:wght@400;700&family=Almarai:wght@400;700&family=El+Messiri:wght@400;700&family=Reem+Kufi:wght@400;700&family=Markazi+Text:wght@400;700&family=Mirza:wght@400;700&family=Aref+Ruqaa&family=Katibeh&family=Lemonada:wght@400;700&family=Rakkas&family=Lateef:wght@400;700&family=Baloo+Bhaijaan+2:wght@400;700&family=Mada:wght@400;700&family=Outfit:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background Orbs -->
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container nav-inner">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <span>زخرفة<span class="highlight">برو</span></span>
+            </a>
+            <nav class="nav-links">
+                <a href="#home">الرئيسية</a>
+                <a href="#about">عن الأداة</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="home" class="container">
+
+        <!-- Hero -->
+        <section class="hero-section">
+            <h1 class="glass-text">زخرفة الأسماء والنصوص بالعربي والإنجليزي</h1>
+            <p class="subtitle">اكتب اسمك أو نصك وشاهد أكثر من 50 خطاً وزخرفةً فريدة في ثانية — جاهزة للنسخ لانستقرام
+                وتيك توك وبي باي</p>
+        </section>
+
+        <!-- Main Tool Card -->
+        <section class="tool-card glass-panel">
+
+            <!-- Language Tabs -->
+            <div class="lang-tabs">
+                <button class="lang-tab active" id="tabAr" data-lang="ar">
+                    <i class="fa-solid fa-globe"></i> العربية
+                </button>
+                <button class="lang-tab" id="tabEn" data-lang="en">
+                    <i class="fa-solid fa-language"></i> الإنجليزية
+                </button>
+            </div>
+
+            <!-- Input Row -->
+            <div class="input-row">
+                <div class="input-container glass-panel" id="inputWrap">
+                    <i class="fa-solid fa-keyboard input-icon"></i>
+                    <input type="text" id="textInput" placeholder="اكتب اسمك هنا..." autocomplete="off">
+                    <button type="button" id="clearBtn" class="clear-btn" title="مسح"><i
+                            class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+
+            <!-- Color Picker Row -->
+            <div class="options-row">
+                <span class="options-label"><i class="fa-solid fa-palette"></i> لون النص</span>
+                <div class="color-swatches" id="colorSwatches">
+                    <button class="swatch" data-color="#FFFFFF" style="background:#FFFFFF" title="أبيض"></button>
+                    <button class="swatch" data-color="#FF1177" style="background:#FF1177" title="وردي"></button>
+                    <button class="swatch" data-color="#FF6B00" style="background:#FF6B00" title="برتقالي"></button>
+                    <button class="swatch" data-color="#FFD600" style="background:#FFD600" title="أصفر"></button>
+                    <button class="swatch" data-color="#00E676" style="background:#00E676" title="أخضر"></button>
+                    <button class="swatch" data-color="#00D4FF" style="background:#00D4FF" title="سماوي"></button>
+                    <button class="swatch active-swatch" data-color="#FFFFFF" style="background:#FFFFFF"
+                        title="أبيض"></button>
+                    <button class="swatch" data-color="#A855F7" style="background:#A855F7" title="بنفسجي"></button>
+                    <button class="swatch dark-swatch" data-color="#111111" style="background:#111111"
+                        title="أسود"></button>
+                    <label class="swatch custom-swatch" title="لون مخصص">
+                        <i class="fa-solid fa-eye-dropper"></i>
+                        <input type="color" id="customColor" value="#FFFFFF">
+                    </label>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Results -->
+        <section class="results-section">
+            <div class="results-grid" id="resultsGrid"></div>
+            <div class="empty-state" id="emptyState">
+                <div class="empty-icon"><i class="fa-solid fa-pen-nib"></i></div>
+                <h3>بانتظار إبداعك...</h3>
+                <p>ابدأ بكتابة اسمك في الأعلى لرؤية أكثر من 50 خطاً فورياً!</p>
+            </div>
+        </section>
+
+        <!-- About / SEO -->
+        <section id="about" class="seo-content glass-panel">
+            <h2>لماذا نعتبر أفضل موقع لزخرفة الأسماء؟</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fa-solid fa-bolt feature-icon"></i>
+                    <h3>فورية 100%</h3>
+                    <p>الزخرفة تتم أمامك لحظةً بلحظة بدون تحميل أو تأخير.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa-solid fa-globe feature-icon"></i>
+                    <h3>عربي وإنجليزي</h3>
+                    <p>الموقع الوحيد الذي يدعم زخرفة اللغتين بأكثر من 50 نمطاً.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa-solid fa-copy feature-icon"></i>
+                    <h3>نسخ بضغطة واحدة</h3>
+                    <p>اضغط على أي خط يعجبك فيُنسخ فوراً إلى الحافظة.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa-brands fa-instagram feature-icon"></i>
+                    <h3>مقبول في كل مكان</h3>
+                    <p>جميع الخطوط مدعومة في انستقرام وتويتر وتيك توك والألعاب.</p>
+                </div>
+            </div>
+            <article class="detailed-article">
+                <h3>أداة زخرفة الأسماء العربية والإنجليزية 2026</h3>
+                <p>في عصر التواصل الاجتماعي أصبح اسمك الظاهر على حسابك جزءاً من هويتك. من خلال خطوط Unicode الفريدة
+                    يمكنك تحويل اسمك العادي إلى تحفة فنية تُثير الإعجاب وتجعل ملفك الشخصي لا يُنسى — سواء كنت تكتب
+                    بالعربي أو الإنجليزي!</p>
+                <p>سواء كنت لاعباً في PUBG تبحث عن اسم مرعب، أو صاحبة محتوى على Instagram تريدين بايو أنيقاً، فهذه
+                    الأداة مجانية لك تماماً!</p>
+            </article>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>جميع الحقوق محفوظة &copy; 2026 — أداة زخرفة برو</p>
+        <div class="socials">
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
